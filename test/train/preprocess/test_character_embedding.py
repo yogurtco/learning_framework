@@ -5,7 +5,7 @@ import numpy as np
 
 def test_character_embedding():
     text_to_embed = ['The cat and the bat, sat on a hat', '!@#$%^&*()', '12343098', '"`', '"''_-+=/.,\\''']
-    embedding = CharacterEmbeddingPreprocess()(TextSample(text_to_embed)).text
+    embedding = CharacterEmbeddingPreprocess()(TextSample(text_to_embed)).text_data
 
     for i in range(embedding.shape[0]):
         assert np.sum(embedding[i, :]) == 1

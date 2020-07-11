@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from learning_framework.src.train.sample.i_sample import ISample
+from learning_framework.src.train.sample.base_sample import BaseSample
 
 
 class IPreprocess(ABC):
@@ -9,7 +9,7 @@ class IPreprocess(ABC):
     """
 
     @abstractmethod
-    def __call__(self, sample: ISample):
+    def __call__(self, sample: BaseSample):
         """
         Perform preprocess
         :return: transformed object
